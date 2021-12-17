@@ -10,7 +10,7 @@ window=Tk()
 window.title("Sign In")
 window.geometry("1350x700+0+0")
 
-bg = PhotoImage(file = "bgd.png")
+bg = PhotoImage(file = "light_bgd.png")
   
 label1 = Label( window, image = bg)
 label1.place(x = 0, y = 0)

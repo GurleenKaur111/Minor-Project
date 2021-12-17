@@ -3,12 +3,17 @@ import mysql.connector
 from mysql.connector import errorcode
 import tkinter.messagebox
 from PIL import Image,ImageTk
+import Developers
 
 def signup(r):
 
 	window=Toplevel(r)	
 	window.title("Sign Up")
 	window.geometry("1350x700+0+0")
+
+	bg = PhotoImage(file = "light_bgd.png")
+	label1 = Label(window, image = bg)
+	label1.place(x = 0, y = 0)
 
 	top_left = Frame(window,highlightbackground = "#053742", highlightcolor= "#053742",highlightthickness=2,bg="#A2DBFA")
 	top_left.place(x=227,y=100,width=250,height=500)
@@ -66,7 +71,7 @@ def signup(r):
 	
 	Button(frame1,text="SIGN UP",command=insert,font=("times new roman",12),fg="#053742",bg="#E8F0F2").place(x=170,y=340)
 
-	Button(frame1,text="DEVELOPERS",font=("times new roman",12),fg="#053742",bg="#E8F0F2").place(x=160,y=400)
+	Button(frame1,text="DEVELOPERS",command=lambda:Developers.developers(window),font=("times new roman",12),fg="#053742",bg="#E8F0F2").place(x=160,y=400)
 
 	window.mainloop()
 
